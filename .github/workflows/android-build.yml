@@ -22,6 +22,14 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Prepare Web Assets
+        run: |
+          # If files are in root, move them to 'www' for Capacitor
+          if [ ! -d "www" ]; then
+            mkdir www
+            cp index.html style.css app.js manifest.json icon.png www/ 2>/dev/null || true
+          fi
+
       - name: Install Dependencies
         run: |
           npm install
