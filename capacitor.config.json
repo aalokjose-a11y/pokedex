@@ -1,0 +1,8 @@
+{
+  "appId": "com.lazylucifer.pokedex",
+  "appName": "AI Pokédex",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
